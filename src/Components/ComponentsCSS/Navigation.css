@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+/* Remove default list styles */
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Make list items display inline */
+.navigation li {
+  display: inline;
+  margin-right: 20px; /* Add spacing between list items (adjust as needed) */
+}
+
+/* Style anchor tags within list items */
+.navigation a {
+  text-decoration: none;
+  color: #333; /* Adjust the color as needed */
+}
