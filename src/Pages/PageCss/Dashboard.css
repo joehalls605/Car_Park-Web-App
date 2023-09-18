@@ -1,0 +1,26 @@
+.dashboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0; /* Set your desired background color */
+      }
+      
+      .container {
+        width: 300px;
+        height: 200px;
+        background-color: #ffffff; /* Set your desired container background color */
+        border: 1px solid #cccccc; /* Add a border if desired */
+        border-radius: 10px; /* Round the corners if desired */
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease; /* Add a smooth transition effect */
+      }
+      
+      .container:hover {
+        background-color: #e0e0e0; /* Change the background color on hover */
+      }
+    

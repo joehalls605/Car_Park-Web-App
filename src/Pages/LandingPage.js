@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginForm from '../Components/LoginForm';
 import Navigation from '../Components/Navigation';
-import '../Components/ComponentsCSS/LandingPage.css';
+import './PageCss/LandingPage.css'
 import Footer from '../Components/Footer';
 
 const LandingPage = () => {
