@@ -3,14 +3,13 @@ import './ComponentsCSS/Navigation.css';
 
 const Navigation = () => {
   return (
-    <div className='navigation'>
-      <nav>
-        <ul>
-          <li><a href="/">Account</a></li>
-          <li><a href="/">Bookings</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav className='navigation'>
+      <h1 className='font-mono left-title'>Kesington Car Park</h1>
+      <ul>
+        <li><a href="/">Account</a></li>
+        <li><a href="/">Bookings</a></li>
+      </ul>
+    </nav>
   );
 };
 
