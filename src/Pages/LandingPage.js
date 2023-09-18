@@ -1,25 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react';
 import LoginForm from '../Components/LoginForm';
 import Navigation from '../Components/Navigation';
-import '../Components/ComponentsCSS/LandingPage.css'
-
+import '../Components/ComponentsCSS/LandingPage.css';
+import Footer from '../Components/Footer';
 
 const LandingPage = () => {
-
-return(
-    <div>
-        <div class='landing-page'>
-        <header class="font-mono"> 
-        <h1 class='font-mono'>Kesington Car Park</h1>
-        <Navigation/>
-        </header>
-        </div>
-        <body>
-        <LoginForm/>
-        </body>
+  return (
+    <div className='landing-page'>
+      <header className="font-mono">
+        <Navigation />
+      </header>
+      <LoginForm />
+      <Footer/>
     </div>
-)
-
-}
+  );
+};
 
 export default LandingPage;
+ 
