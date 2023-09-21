@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <div className='landing-page'>
       <header className="font-mono">
-        <Header />
+        <Header/><p>remove header unless logged in</p>
       </header>
       <LoginForm />
       <Footer/>

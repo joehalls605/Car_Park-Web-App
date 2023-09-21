@@ -1,16 +1,16 @@
-import React from 'react';
-import './ComponentsCss/Navigation.css';
+// import React from 'react';
+// import './ComponentsCss/Navigation.css';
 
-const Navigation = () => {
-  return (
-    <nav className='navigation'>
-      <h1 className='font-mono left-title'>Kesington Car Park</h1>
-      <ul>
-        <li><a href="/">Account</a></li>
-        <li><a href="/">Bookings</a></li>
-      </ul>
-    </nav>
-  );
-};
+// const Navigation = () => {
+//   return (
+//     <nav className='navigation'>
+//       <h1 className='font-mono left-title'>Kesington Car Park</h1>
+//       <ul>
+//         <li><a href="/">Account</a></li>
+//         <li><a href="/">Bookings</a></li>
+//       </ul>
+//     </nav>
+//   );
+// };
 
-export default Navigation;
+// export default Navigation;
