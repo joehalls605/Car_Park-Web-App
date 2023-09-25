@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import './ComponentsCss/LoginForm.css';
-import useNavigation from '../Hooks/use-navigation';
-import Dashboard from '../Pages/Dashboard';
 
-const LoginForm = () => {
+const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { navigate } = useNavigation();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email === 'test@gmail.com' && password === 'test') {
-      navigate('/dashboard');
+      // Call the onLogin callback when login is successful
+      onLogin();
+      alert("Login successful");
     } else {
       alert('Invalid login. Please try again');
     }
