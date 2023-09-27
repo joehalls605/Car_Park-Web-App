@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react'
 import DateBooking from '../Components/DateBooking';
+import SpaceBooking from '../Components/SpaceBooking';
 
 const BookingPage = () => {
 
