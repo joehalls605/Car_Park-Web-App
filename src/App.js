@@ -8,6 +8,7 @@ import Route from './Components/Route';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+ 
 
   // Use useEffect to navigate to '/dashboard' when isLoggedIn becomes true
   useEffect(() => {
