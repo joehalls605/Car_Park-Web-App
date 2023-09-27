@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { NavigationProvider } from './Context/Navigation';
 import LandingPage from './Pages/LandingPage';
-import Dashboard from './Pages/Dashboard';
+import DashboardPage from './Pages/DashboardPage';
 import AccountPage from './Pages/AccountPage';
-import BookingsPage from './Pages/BookingsPage';
+import BookingsPage from './Pages/ViewBookingsPage';
 import Route from './Components/Route';
 
 const App = () => {
@@ -22,7 +22,7 @@ const App = () => {
     <NavigationProvider>
       <div>
         {isLoggedIn ? (
-          <Dashboard />
+          <DashboardPage />
         ) : (
           <LandingPage setIsLoggedIn={setIsLoggedIn} />
         )}
@@ -34,7 +34,7 @@ const App = () => {
             <BookingsPage />
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            <DashboardPage />
           </Route>
         </div>
       </div>

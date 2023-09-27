@@ -6,10 +6,10 @@ import SpaceBooking from '../Components/SpaceBooking'
 import { useState } from 'react';
 import DateBooking from '../Components/DateBooking'
 import AccountPage from './AccountPage'
-import BookingsPage from './BookingsPage'
+import ViewBookingsPage from './ViewBookingsPage'
 
 
-const Dashboard = () => {
+const DashboardPage = () => {
 
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [isViewingBookings, setIsViewBookings] = useState(false);
@@ -54,7 +54,7 @@ const Dashboard = () => {
           ) : (
             <>
             {isMakingBooking && <SpaceBooking/>}
-            {isViewingBookings && <BookingsPage/>}
+            {isViewingBookings && <ViewBookingsPage/>}
             {isViewingAccount && <AccountPage/>}
             </>
           )}
@@ -62,4 +62,4 @@ const Dashboard = () => {
       );
 }
 
-export default Dashboard;
+export default DashboardPage;

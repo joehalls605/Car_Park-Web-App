@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react'
 import DateBooking from '../Components/DateBooking';
 
-const Booking = () => {
+const BookingPage = () => {
 
 const [isDateSet, setDate] = useState(false);
 
@@ -15,4 +15,4 @@ return(
     </div>
 )
 }
-export default Booking;
+export default BookingPage;
