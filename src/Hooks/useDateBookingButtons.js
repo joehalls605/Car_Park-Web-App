@@ -8,7 +8,7 @@ const useDateBookingButtons = () => {
   );
 
   return (
-    <div className="grid grid-cols-7 gap-2">
+    <div className="grid grid-cols-7 gap-2 p-10">
       {rows.map((row, rowIndex) => (
         <React.Fragment key={rowIndex}>
           {row.map((date) => (

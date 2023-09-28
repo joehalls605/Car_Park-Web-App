@@ -7,6 +7,7 @@ import { useState } from 'react';
 import DateBooking from '../Components/DateBooking'
 import AccountPage from './AccountPage'
 import ViewBookingsPage from './ViewBookingsPage'
+import BookingPage from './BookingPage'
 
 
 const DashboardPage = () => {
@@ -53,7 +54,7 @@ const DashboardPage = () => {
             </>
           ) : (
             <>
-            {isMakingBooking && <DateBooking/>}
+            {isMakingBooking && <BookingPage/>}
             {isViewingBookings && <ViewBookingsPage/>}
             {isViewingAccount && <AccountPage/>}
             </>
