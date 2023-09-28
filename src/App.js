@@ -8,7 +8,8 @@ import Route from './Components/Route';
 import ViewBookingsPage from './Pages/ViewBookingsPage';
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const initialIsLoggedIn = window.location.pathname === '/dashboard';
+  const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
 
   // Use useEffect to navigate to '/dashboard' when isLoggedIn becomes true
   useEffect(() => {
@@ -21,13 +22,13 @@ const App = () => {
   // Add a popstate event listener to handle browser back/forward navigation
   useEffect(() => {
     const handlePopState = () => {
-      // Check if the current path is the root URL '/'
-      if (window.location.pathname === '/') {
-        // Set isLoggedIn to false when navigating back to the root URL
-        setIsLoggedIn(false);
+      const currentPath = window.location.pathname;
 
-        // Programmatically navigate to the LandingPage
+      if (currentPath === '/') {
+        setIsLoggedIn(false);
         window.history.pushState({}, '', '/');
+      } else if (currentPath === '/dashboard') {
+        setIsLoggedIn(true);
       }
     };
 
@@ -54,9 +55,6 @@ const App = () => {
           </Route>
           <Route path="/booking">
             <BookingPage />
-          </Route>
-          <Route path="/dashboard">
-            <DashboardPage />
           </Route>
           <Route path="/viewBookings">
             <ViewBookingsPage />

@@ -53,7 +53,7 @@ const DashboardPage = () => {
             </>
           ) : (
             <>
-            {isMakingBooking && <SpaceBooking/>}
+            {isMakingBooking && <DateBooking/>}
             {isViewingBookings && <ViewBookingsPage/>}
             {isViewingAccount && <AccountPage/>}
             </>
