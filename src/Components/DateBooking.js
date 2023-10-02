@@ -6,6 +6,8 @@ const DateBooking = () => {
 
     const buttons = useDateBookingButtons();
 
+    
+
     return (
         <div>{buttons}</div>
     )

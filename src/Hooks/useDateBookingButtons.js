@@ -7,6 +7,34 @@ const useDateBookingButtons = () => {
     dates.slice(rowIndex * 7, (rowIndex + 1) * 7)
   );
 
+  const datesTotal = () => {
+    
+    const bookingTotal = 0;
+    dates.forEach(date => {
+      if(date.timeSlots.booked === true){
+        bookingTotal ++;
+      }
+    });
+
+    return datesTotal
+  } 
+
+  const datesColoured = (datesTotal) => {
+    const dateColour = null;
+   
+    if(datesTotal <= 5){
+      dateColour = "bg-green-700"
+    }
+    if(datesTotal >= 5 && 9){
+      dateColour = "bg-amber-700"
+    }
+    dateColour = "bg-red-700"
+   
+    return dateColour
+  } 
+
+ //
+
   return (
     <div className="grid grid-cols-7 gap-2 p-10">
       {rows.map((row, rowIndex) => (
