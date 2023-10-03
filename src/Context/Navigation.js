@@ -16,6 +16,8 @@ const NavigationProvider = ({children}) => {
         }
     }, [])
 
+
+    // Important, lets us navigate around the application.
     const navigate = (to) =>{
         window.history.pushState({}, '', to);
         setCurrentPath(to);
@@ -23,6 +25,10 @@ const NavigationProvider = ({children}) => {
 
     return(
         <NavigationContext.Provider value={{currentPath, navigate}}>
+            {/* <div>
+            <button onClick={() => navigate('/accordion')}>go to accordion</button>
+            </div> */}
+            {/* {currentPath} */}
             {children}
         </NavigationContext.Provider>
     )

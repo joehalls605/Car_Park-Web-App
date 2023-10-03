@@ -7,6 +7,14 @@ const useDateBookingButtons = () => {
     dates.slice(rowIndex * 7, (rowIndex + 1) * 7)
   );
 
+  /* 
+  
+loop through the times, if the time is booked, update a variable number.
+Depending on the variable number, update the button colour to display different hue of colour ranging from green to amber to red. The variable
+  Below is just set up but hopefully on right path.
+
+*/
+
   const datesTotal = () => {
     
     const bookingTotal = 0;

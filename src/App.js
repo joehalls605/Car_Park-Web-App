@@ -6,15 +6,16 @@ import AccountPage from './Pages/AccountPage';
 import BookingPage from './Pages/BookingPage';
 import Route from './Components/Route';
 import ViewBookingsPage from './Pages/ViewBookingsPage';
+import Link from './Components/Link';
 
 const App = () => {
   const initialIsLoggedIn = window.location.pathname === '/dashboard';
   const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
 
-  // Use useEffect to navigate to '/dashboard' when isLoggedIn becomes true
+ 
   useEffect(() => {
     if (isLoggedIn) {
-      // Update the URL to '/dashboard'
+     
       window.history.pushState({}, '', '/dashboard');
     }
   }, [isLoggedIn]);
@@ -45,7 +46,7 @@ const App = () => {
     <NavigationProvider>
       <div>
         {isLoggedIn ? (
-          <DashboardPage />
+          <DashboardPage/>
         ) : (
           <LandingPage setIsLoggedIn={setIsLoggedIn} />
         )}

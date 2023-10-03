@@ -5,7 +5,7 @@ import Link from './Link';
 const Header = () => {
   return (
     <nav className='navigation'>
-      <h1 className='font-mono left-title'>Kesington Car Park</h1>
+      <h1 className='font-mono left-title'><Link to="/">Kesington Car Park</Link></h1>
       <ul>
         
         <li><a><Link to="/accounts">Account</Link></a>
