@@ -27,19 +27,19 @@ Depending on the variable number, update the button colour to display different 
     return datesTotal
   } 
 
-  const datesColoured = (datesTotal) => {
-    const dateColour = null;
+  // const datesColoured = (datesTotal) => {
+  //   const dateColour = null;
    
-    if(datesTotal <= 5){
-      dateColour = "bg-green-700"
-    }
-    if(datesTotal >= 5 && 9){
-      dateColour = "bg-amber-700"
-    }
-    dateColour = "bg-red-700"
+  //   if(datesTotal <= 5){
+  //     dateColour = "bg-green-700"
+  //   }
+  //   if(datesTotal >= 5 && 9){
+  //     dateColour = "bg-amber-700"
+  //   }
+  //   dateColour = "bg-red-700"
    
-    return dateColour
-  } 
+  //   return dateColour
+  // } 
 
  //
 
