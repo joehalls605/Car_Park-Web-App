@@ -80,6 +80,38 @@ const dates = [
       { start: '6:00 PM', end: '7:00 PM', booked: false },
     ]
   },
+  {
+    _id: '6', text: 'SAT SEP 21ST', timeSlots: [
+      { start: '7:00 AM', end: '8:00 AM', booked: false },
+      { start: '8:00 AM', end: '9:00 AM', booked: false },
+      { start: '9:00 AM', end: '10:00 AM', booked: false },
+      { start: '10:00 AM', end: '11:00 AM', booked: false },
+      { start: '11:00 AM', end: '12:00 PM', booked: false },
+      { start: '12:00 PM', end: '1:00 PM', booked: false },
+      { start: '1:00 PM', end: '2:00 PM', booked: false },
+      { start: '2:00 PM', end: '3:00 PM', booked: false },
+      { start: '3:00 PM', end: '4:00 PM', booked: false },
+      { start: '4:00 PM', end: '5:00 PM', booked: false },
+      { start: '5:00 PM', end: '6:00 PM', booked: false },
+      { start: '6:00 PM', end: '7:00 PM', booked: false },
+    ]
+  },
+  {
+    _id: '7', text: 'SUN SEP 22ND', timeSlots: [
+      { start: '7:00 AM', end: '8:00 AM', booked: false },
+      { start: '8:00 AM', end: '9:00 AM', booked: false },
+      { start: '9:00 AM', end: '10:00 AM', booked: false },
+      { start: '10:00 AM', end: '11:00 AM', booked: false },
+      { start: '11:00 AM', end: '12:00 PM', booked: false },
+      { start: '12:00 PM', end: '1:00 PM', booked: false },
+      { start: '1:00 PM', end: '2:00 PM', booked: false },
+      { start: '2:00 PM', end: '3:00 PM', booked: false },
+      { start: '3:00 PM', end: '4:00 PM', booked: false },
+      { start: '4:00 PM', end: '5:00 PM', booked: false },
+      { start: '5:00 PM', end: '6:00 PM', booked: false },
+      { start: '6:00 PM', end: '7:00 PM', booked: false },
+    ]
+  },
 ];
 
 export default dates;

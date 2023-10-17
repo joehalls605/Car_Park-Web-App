@@ -2,11 +2,6 @@ import React from "react";
 import dates from "../Data/Dates";
 
 const useDateBookingButtons = () => {
-  // Create an array of arrays to represent rows and columns
-  const rows = Array.from({ length: 4 }, (_, rowIndex) =>
-    dates.slice(rowIndex * 7, (rowIndex + 1) * 7)
-  );
-
   const datesColour = (timeSlots) => {
     let bookingTotal = 0;
     timeSlots.forEach((slot) => {
@@ -15,29 +10,26 @@ const useDateBookingButtons = () => {
       }
     });
 
+    let buttonClass = "bg-green-700 text-lg text-white px-4 w-30 h-30 py-2 rounded hover:bg-green-900 transition-colors duration-300 whitespace-no-wrap";
+
     if (bookingTotal > 9) {
-      return "bg-red-700 text-xl text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300";
+      buttonClass = "bg-red-700 text-lg text-white px-4 w-30 h-30 py-2 rounded hover:bg-red-900 transition-colors duration-300 whitespace-no-wrap";
     } else if (bookingTotal >= 5 && bookingTotal < 9) {
-      return "bg-orange-700 text-xl text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300";
-    } else {
-      return "bg-green-700 text-xl text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors duration-300";
+      buttonClass = "bg-orange-700 text-lg text-white px-4 w-30 h-30 py-2 rounded hover-bg-orange-900 transition-colors duration-300 whitespace-no-wrap";
     }
+
+    return buttonClass;
   };
 
   return (
-    <div className="grid grid-cols-7 gap-2 p-10">
-      {rows.map((row, rowIndex) => (
-        <React.Fragment key={rowIndex}>
-          {row.map((date) => {
-            const buttonClass = datesColour(date.timeSlots);
-            return (
-              <button key={date._id} className={buttonClass}>
-                {date.text}
-              </button>
-            );
-          })}
-        </React.Fragment>
-      ))}
+    <div className="flex justify-center items-center">
+      <div className="grid grid-cols-7 gap-2 p-10 mt-4">
+        {dates.map((date) => (
+          <button key={date._id} className={datesColour(date.timeSlots)}>
+            {date.text}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
