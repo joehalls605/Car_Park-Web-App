@@ -18,17 +18,26 @@ Allows users to perform actions like making a booking, viewing bookings, and acc
 */
 
 
-const DashboardPage = () => {
+const DashboardPage = ({setIsLoggedIn}) => {
 
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [isViewingBookings, setIsViewBookings] = useState(false);
     const [isViewingAccount, setIsViewAccount] = useState(false);
 
     const handleMakeBooking = () => {
+      setIsLoggedIn(true);
       setIsMakingBooking(true);
       setIsViewBookings(false);
       setIsViewAccount(false);
+      window.history.pushState({}, '', '/booking');
      }
+
+
+    // const handleMakeBooking = () => {
+    //   setIsMakingBooking(true);
+    //   setIsViewBookings(false);
+    //   setIsViewAccount(false);
+    //  }
 
      const handleViewBookings = () => {
       setIsMakingBooking(false);

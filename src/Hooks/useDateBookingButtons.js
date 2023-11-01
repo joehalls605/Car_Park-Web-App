@@ -27,6 +27,7 @@ const useDateBookingButtons = (handleClick) => {
 
   return (
     <div className="flex justify-center items-center">
+        <h2>Date booking buttons</h2>
       <div className="grid grid-cols-1 md:grid-cols-7 gap-2 p-10 mt-4">
         {dates.map((date) => (
           <button

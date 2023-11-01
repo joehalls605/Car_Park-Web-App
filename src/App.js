@@ -21,15 +21,11 @@ const App = () => {
   const initialIsLoggedIn = window.location.pathname === '/dashboard';
   const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
 
- 
-  useEffect(() => {
-    if (isLoggedIn) {
-     
-      window.history.pushState({}, '', '/dashboard');
-    }
-  }, [isLoggedIn]);
+  useEffect(()=> {
+    const initialIsLoggedIn = window.location.pathname === '/dashboard';
+    setIsLoggedIn(initialIsLoggedIn);
+  }, [])
 
-  // Add a popstate event listener to handle browser back/forward navigation
   useEffect(() => {
     const handlePopState = () => {
       const currentPath = window.location.pathname;
@@ -37,7 +33,7 @@ const App = () => {
       if (currentPath === '/') {
         setIsLoggedIn(false);
         window.history.pushState({}, '', '/');
-      } else if (currentPath === '/dashboard') {
+      } else if (currentPath === '/dashboard' || currentPath === '/booking') {
         setIsLoggedIn(true);
       }
     };
@@ -55,7 +51,7 @@ const App = () => {
     <NavigationProvider>
       <div>
         {isLoggedIn ? (
-          <DashboardPage/>
+          <DashboardPage setIsLoggedIn={setIsLoggedIn}/>
         ) : (
           <LandingPage setIsLoggedIn={setIsLoggedIn} />
         )}
