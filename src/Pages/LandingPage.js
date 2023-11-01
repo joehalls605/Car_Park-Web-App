@@ -4,6 +4,18 @@ import Header from '../Components/Header';
 import './PageCss/LandingPage.css';
 import Footer from '../Components/Footer';
 
+
+/* 
+
+LandingPage.js:
+
+Represents the landing page for users who are not logged in.
+Contains a login form and handles a simulated login.
+
+*/
+
+
+
 const LandingPage = ({ setIsLoggedIn }) => {
   const handleLogin = () => {
     // Simulate a successful login

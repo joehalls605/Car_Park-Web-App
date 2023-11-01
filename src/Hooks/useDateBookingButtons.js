@@ -1,6 +1,10 @@
 import React from "react";
 import dates from "../Data/Dates";
 
+/*
+A custom hook that generates date booking buttons based on data in the dates file.
+*/
+
 const useDateBookingButtons = (handleClick) => {
   const datesColour = (timeSlots) => {
     let bookingTotal = 0;

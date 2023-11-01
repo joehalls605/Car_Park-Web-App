@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
 import './ComponentsCss/LoginForm.css';
 
+
+/*
+Displays a login form.
+Handles form submission and simulates a successful login.
+*/
+
+
 const LoginForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

@@ -8,6 +8,15 @@ import Route from './Components/Route';
 import ViewBookingsPage from './Pages/ViewBookingsPage';
 import Link from './Components/Link';
 
+/* 
+App.js:
+
+The main entry point of the application.
+Handles routing and navigation based on the user's login status.
+Imports and renders various pages and components like LandingPage, DashboardPage, AccountPage, BookingPage, ViewBookingsPage, and Route.
+Uses the NavigationProvider to manage navigation context.
+*/
+
 const App = () => {
   const initialIsLoggedIn = window.location.pathname === '/dashboard';
   const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);

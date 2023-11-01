@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import './ComponentsCss/Footer.css'
 
+/*
+Displays the application's footer.
+*/
+
+
 const Footer = () => {
 
     return (

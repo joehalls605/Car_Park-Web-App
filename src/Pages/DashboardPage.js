@@ -10,6 +10,14 @@ import ViewBookingsPage from './ViewBookingsPage'
 import BookingPage from './BookingPage'
 
 
+/*
+DashboardPage.js:
+
+Displays the dashboard for logged-in users.
+Allows users to perform actions like making a booking, viewing bookings, and accessing their account.
+*/
+
+
 const DashboardPage = () => {
 
     const [isMakingBooking, setIsMakingBooking] = useState(false);

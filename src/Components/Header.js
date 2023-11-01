@@ -2,6 +2,12 @@ import React from 'react';
 import './ComponentsCss/Navigation.css';
 import Link from './Link';
 
+
+/*
+Displays the application's header/navigation bar.
+*/
+
+
 const Header = () => {
   return (
     <nav className='navigation'>
