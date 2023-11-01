@@ -18,11 +18,11 @@ Uses the NavigationProvider to manage navigation context.
 */
 
 const App = () => {
-  const initialIsLoggedIn = window.location.pathname === '/dashboard';
+  const initialIsLoggedIn = true;
   const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
 
   useEffect(()=> {
-    const initialIsLoggedIn = window.location.pathname === '/dashboard';
+    const initialIsLoggedIn = true;
     setIsLoggedIn(initialIsLoggedIn);
   }, [])
 

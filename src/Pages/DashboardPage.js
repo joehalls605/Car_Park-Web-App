@@ -24,6 +24,8 @@ const DashboardPage = ({setIsLoggedIn}) => {
     const [isViewingBookings, setIsViewBookings] = useState(false);
     const [isViewingAccount, setIsViewAccount] = useState(false);
 
+    
+
     const handleMakeBooking = () => {
       setIsLoggedIn(true);
       setIsMakingBooking(true);
