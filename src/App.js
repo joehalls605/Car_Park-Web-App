@@ -18,11 +18,11 @@ Uses the NavigationProvider to manage navigation context.
 */
 
 const App = () => {
-  const initialIsLoggedIn = true;
+  const initialIsLoggedIn = false;
   const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
 
   useEffect(()=> {
-    const initialIsLoggedIn = true;
+    const initialIsLoggedIn = false;
     setIsLoggedIn(initialIsLoggedIn);
   }, [])
 

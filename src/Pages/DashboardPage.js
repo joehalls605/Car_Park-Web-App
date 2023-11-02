@@ -35,11 +35,6 @@ const DashboardPage = ({setIsLoggedIn}) => {
      }
 
 
-    // const handleMakeBooking = () => {
-    //   setIsMakingBooking(true);
-    //   setIsViewBookings(false);
-    //   setIsViewAccount(false);
-    //  }
 
      const handleViewBookings = () => {
       setIsMakingBooking(false);

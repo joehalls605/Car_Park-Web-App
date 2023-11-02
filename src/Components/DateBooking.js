@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
-import useDateBookingButtons from '../Hooks/useDateBookingButtons';
+import React from "react";
+import useDateBookingButtons from "../Hooks/useDateBookingButtons";
 
-const DateBooking = ({ setShowDateBooking, setShowSpaceBooking }) => {
-  const buttons = useDateBookingButtons((text) => {
-    setShowSpaceBooking(true);
-    setShowDateBooking(false);
-  });
+const DateBooking = ({ handleClick}) => {
+  const buttons = useDateBookingButtons(handleClick);
 
   return <div>{buttons}</div>;
 };

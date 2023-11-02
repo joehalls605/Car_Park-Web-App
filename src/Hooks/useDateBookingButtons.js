@@ -6,6 +6,7 @@ A custom hook that generates date booking buttons based on data in the dates fil
 */
 
 const useDateBookingButtons = (handleClick) => {
+
   const datesColour = (timeSlots) => {
     let bookingTotal = 0;
     timeSlots.forEach((slot) => {
