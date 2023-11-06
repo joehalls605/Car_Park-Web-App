@@ -15,10 +15,10 @@ Contains a login form and handles a simulated login.
 */
 
 
-
 const LandingPage = ({ setIsLoggedIn }) => {
   const handleLogin = () => {
     // Simulate a successful login
+    window.history.pushState({}, '', '/dashboard');
     setIsLoggedIn(true);
   };
 

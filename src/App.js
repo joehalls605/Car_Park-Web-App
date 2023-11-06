@@ -19,10 +19,12 @@ Uses the NavigationProvider to manage navigation context.
 
 const App = () => {
   const initialIsLoggedIn = false;
+  console.log(initialIsLoggedIn);
   const [isLoggedIn, setIsLoggedIn] = useState(initialIsLoggedIn);
 
   useEffect(()=> {
     const initialIsLoggedIn = false;
+    console.log(initialIsLoggedIn);
     setIsLoggedIn(initialIsLoggedIn);
   }, [])
 
@@ -33,8 +35,10 @@ const App = () => {
       if (currentPath === '/') {
         setIsLoggedIn(false);
         window.history.pushState({}, '', '/');
+        console.log(currentPath)
       } else if (currentPath === '/dashboard' || currentPath === '/booking') {
         setIsLoggedIn(true);
+        window.history.pushState({}, '', 'dashboard' )
       }
     };
 

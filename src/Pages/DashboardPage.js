@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import './PageCss/Dashboard.css'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
@@ -18,23 +18,22 @@ Allows users to perform actions like making a booking, viewing bookings, and acc
 */
 
 
-const DashboardPage = ({setIsLoggedIn}) => {
+const DashboardPage = () => {
 
     const [isMakingBooking, setIsMakingBooking] = useState(false);
     const [isViewingBookings, setIsViewBookings] = useState(false);
     const [isViewingAccount, setIsViewAccount] = useState(false);
 
-    
+
+  
 
     const handleMakeBooking = () => {
-      setIsLoggedIn(true);
+      window.history.pushState({}, '', '/booking');
       setIsMakingBooking(true);
       setIsViewBookings(false);
       setIsViewAccount(false);
-      window.history.pushState({}, '', '/booking');
+      
      }
-
-
 
      const handleViewBookings = () => {
       setIsMakingBooking(false);
